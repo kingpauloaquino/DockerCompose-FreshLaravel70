@@ -26,7 +26,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./mysql:/var/lib/mysql
+      - ./my_data:/var/lib/mysql
       - ./config/my.cnf:/etc/mysql/my.cnf
     environment:
       MYSQL_DATABASE: mysql_database

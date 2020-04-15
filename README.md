@@ -32,5 +32,4 @@ To change the `vhost file` go to nginx folder
 To change the `php.ini` go to config folder and edit `php.ini` - you need to re-build your container to take effect.
 
 ## MySQL
-Your MySQL Database Store to mysql folder.
-To change the `my.cnf` go to config folder and edit `my.cnf` - you need to re-build your container to take effect.
+Your MySQL Database Store to mysql folder. To change the `my.cnf` go to config folder and edit `my.cnf` - you need to re-build your container to take effect. `Note: Before you start this container/docker, make sure that the my_data folder is empty.`
