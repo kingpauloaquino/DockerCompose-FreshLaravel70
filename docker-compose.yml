@@ -27,6 +27,7 @@ services:
       - "3306:3306"
     volumes:
       - ./mysql:/var/lib/mysql
+      - ./config/my.cnf:/etc/mysql/my.cnf
     environment:
       MYSQL_DATABASE: mysql_database
       MYSQL_USER: root
@@ -44,6 +45,7 @@ services:
     container_name: php
     volumes:
       - ./src:/var/www/html
+      - ./config/php.ini:/usr/local/etc/php/php.ini
     ports:
       - "9000:9000"
     networks:
@@ -61,7 +63,7 @@ services:
       - laravel
 
   npm:
-    image: node:13.7
+    image: node:12.16
     container_name: npm
     volumes:
       - ./src:/var/www/html
